@@ -11,9 +11,10 @@ import { Resume } from "./Resume"
 import { Learning } from "./Learning"
 import { Courses } from "./Courses"
 export function HomePage() {
+    const [header, setHeader] = React.useState(false);
     return <React.Fragment>
         <NavBar/>
-        <Register/>
+        <Register header={header} setHeader={ setHeader}/>
         <CoolPlaces />
         <TopCompanies />
         < InfyAd />
