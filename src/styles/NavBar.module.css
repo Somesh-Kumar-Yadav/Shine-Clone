@@ -15,6 +15,7 @@
 	justify-content: space-between;
 	align-items: center;
 	list-style: none;
+	height: 60px;
 	margin-top: -20px;
 }
 .nav_left {
@@ -43,6 +44,33 @@
 	padding: 6px 10px;
 	line-height: 1.5;
 	margin-right: 1rem;
+	position: relative;
+}
+
+.jobs,
+.services,
+.resources {
+	position: absolute;
+	color: #212529;
+	width: 170px;
+	background: #fff;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 20%);
+	top: 27px;
+	padding: 10px;
+	padding-left: 20px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	display: none;
+	transition: 0.5s;
+}
+.services {
+	width: 200px;
+}
+.jobs > li,
+.services > li,
+.resources > li {
+	margin-top: 8px;
 }
 .nav_right > li {
 	border-radius: 5px;
@@ -54,6 +82,15 @@
 	background-color: #fff;
 	border-radius: 5px;
 	color: #212529;
+}
+.drop_down {
+	position: relative;
+	display: inline-block;
+}
+.drop_down:hover .jobs,
+.drop_down:hover .services,
+.drop_down:hover .resources {
+	display: block;
 }
 .career_guidance {
 	border-radius: 4px;
