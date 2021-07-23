@@ -10,11 +10,18 @@ import { Jobs } from "./Jobs"
 import { Resume } from "./Resume"
 import { Learning } from "./Learning"
 import { Courses } from "./Courses"
-export function HomePage() {
+import { Recruit } from "./Recruit"
+import  {CareerAdvice} from "./CareerAdvice"
+import styles from "../../styles/HomePage.module.css"
+import { Movies } from "./Movies"
+import { Footer } from "./Footer"
+import { JobSearch } from "./JobSearch"
+export function HomePage({ home,login,register}) {
     const [header, setHeader] = React.useState(false);
     return <React.Fragment>
+        <div className={styles.homepage_body}>
         <NavBar/>
-        <Register header={header} setHeader={ setHeader}/>
+            <Register header={header} setHeader={setHeader} home={home} login={login} register={ register}/>
         <CoolPlaces />
         <TopCompanies />
         < InfyAd />
@@ -23,6 +30,12 @@ export function HomePage() {
         <Jobs />
         <Resume />
         <Learning />
-        <Courses/>
+            <Courses />
+            <JobSearch/>
+            <Recruit/>
+            <CareerAdvice />
+            <Movies/>
+            <Footer/>
+        </div>
     </React.Fragment>
 } 

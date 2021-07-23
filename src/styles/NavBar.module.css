@@ -71,6 +71,13 @@
 .services > li,
 .resources > li {
 	margin-top: 8px;
+	width: 100%;
+	cursor: pointer;
+}
+.jobs > li:hover,
+.services > li:hover,
+.resources > li:hover {
+	background: #eee0ff;
 }
 .nav_right > li {
 	border-radius: 5px;
@@ -92,13 +99,19 @@
 .drop_down:hover .resources {
 	display: block;
 }
+.drop_down:hover .nav_tab {
+	cursor: pointer;
+	background-color: #fff;
+	border-radius: 5px;
+	color: #212529;
+}
 .career_guidance {
 	border-radius: 4px;
 	background: #eee0ff;
 	border: solid 1px #f0c3ff;
 	position: relative;
 	color: #3d4d5c !important;
-	width: 150px;
+	width: 170px;
 	display: flex;
 	align-items: center;
 	padding: 6px;
