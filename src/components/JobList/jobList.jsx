@@ -16,7 +16,12 @@ export default function Lists() {
 
     useEffect(() => {
         setSelected(data1);
+        setStatus(["Apply Here","white","gold"])
       },[data1]);
+
+      useEffect(() => {
+        setStatus(["Apply Here","white","gold"])
+      },[selected]);
 
     const handleClick =(e) => {
         let temp =e;
@@ -170,8 +175,8 @@ export default function Lists() {
                     <i className="fas fa-money-bill-wave"></i><span>-{selected[0].salary} Lakhs</span>
                     <strong>Posted on: {selected[0].date}</strong>
                     <br />
-                    <button id="apply" style={{color:status[1]}} onClick={()=>{
-                        setStatus(["Applied","rgb(140, 214, 29)"])
+                    <button id="apply" style={{color:status[1], background:status[2]}} onClick={()=>{
+                        setStatus(["Applied","rgb(72, 214, 29)","white"])
                     }}><h3>{status[0]}</h3></button>
                 </div>
                 <div className="skills">
