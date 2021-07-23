@@ -72,11 +72,10 @@ const [singnOut,setSignout]=useState(false)
         setSearchJobContent(!searchJobContent)
         setProfileContent(false)
         setServiceContent(false)
-<<<<<<< HEAD
+
         setSignout(false)
-=======
         
->>>>>>> 053f0d6a9ac399e76e016e1631ce00e2849c1668
+
    }
 
    const handleProfile=()=>{
