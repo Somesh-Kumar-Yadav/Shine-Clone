@@ -2,16 +2,42 @@ import React from "react"
 import styles from "../../styles/HomePage.module.css"
 import styled from "styled-components"
 
+const Tabs = styled.div`
+cursor: pointer;
+padding: 0px 20px;
+border-bottom:${props => (props.tab === props.t) ? "4px solid #fbaf18;" : "none"};
+font-weight:${props => (props.tab === props.t) ? "700" : "none"};
+font-size:${props => (props.tab === props.t) ? "15px" : "14px"};
+`
 export function JobSearch() {
-    const [tab, setTabs] = React.useState(3);
+    const [tab, setTabs] = React.useState(1);
     return <section className={styles.job_search}>
         <div className={styles.job_search_title}>
         <h2>Browse Jobs</h2>
         </div>
             <div className={styles.job_search_tabs}>
-            {/* <Tabs> */}
-            {/* </Tabs> */}
-            </div>
+            <Tabs tab={tab} t={1}>
+                <p onClick={()=>
+                setTabs(1)}>Industry</p>
+            </Tabs>
+            <Tabs tab={tab} t={2}>
+                <p onClick={()=>
+                setTabs(2)}>Department</p>
+            </Tabs>
+            <Tabs tab={tab} t={3}>
+                <p onClick={()=>
+                setTabs(3)}>Location</p>
+            </Tabs>
+            <Tabs tab={tab} t={4}>
+                <p onClick={()=>
+                setTabs(4)}>Designation</p>
+            </Tabs>
+            <Tabs tab={tab} t={5}>
+                <p onClick={()=>
+                setTabs(5)}>Skills</p>
+            </Tabs>
+        </div>
+        <div className={styles.job_search_body}>
             {   
             (tab===1)?<div className={styles.job_search_container}>
 
@@ -103,10 +129,71 @@ export function JobSearch() {
                 <p>Hyderabad Jobs <span>(25420)</span></p>
                 <p>Kolkata Jobs <span>(12490)</span></p>
             </div>
-            </div>:<h1>ji</h1>
+            </div>:(tab===4)?<div className={styles.job_search_container}>
+
+            <div>
+                <p>Business Analyst Jobs</p>
+                <p>Java Developer Jobs</p>
+                <p>Assistant Professor Jobs</p>
+                <p>Company Secretary Jobs</p>
+                <p>Police Jobs</p>
+                <p>Network Engineer Jobs</p>
+                <p>Chartered Accountant Jobs</p>
+            </div>
+            <div>
+               <p>Software Engineer Jobs</p>
+                <p>Project Manager Jobs</p>
+                <p>Software Developer Jobs</p>
+                <p>Computer Operator Jobs</p>
+                <p>Receptionist Jobs</p>
+                <p>Data Entry Operator Jobs</p>
+            </div>
+            <div>
+               <p>Pharmacist Jobs</p>
+                <p>Hr Executive Jobs</p>
+                <p>Data Analyst Jobs</p>
+                <p>Supervisor Jobs</p>
+                <p>Android Developer Jobs</p>
+                <p>Air Hostess Jobs</p>
+            </div>
+            </div>:<div className={styles.job_search_container}>
+
+            <div>
+                <p>Online Jobs</p>
+                <p>Data Entry Jobs</p>
+                <p>Central Government Jobs</p>
+                <p>Iti Jobs</p>
+                <p>Electrical Engineering Jobs</p>
+                <p>Digital Marketing Jobs</p>
+                <p>Bpo Jobs</p>
+            </div>
+            <div>
+                <p>Railway Jobs</p>
+                <p>Private Jobs</p>
+                <p>Mechanical Engineering Jobs</p>
+                <p>Fresher Jobs</p>
+                <p>Teaching Jobs</p>
+                <p>Content Writing Jobs</p>
+
+            </div>
+            <div>
+                <p>Part Time Jobs</p>
+                <p>Freelance Jobs</p>
+                <p>Civl Engineering Jobs</p>
+                <p>Banking Jobs</p>
+                <p>Accounting Jobs</p>
+                <p>Mba Jobs</p>
+            </div>
+            </div>
         }
         <div className={styles.job_search_button}>
-            <button>Job by industries</button>
-        </div>
+            <button>
+                {
+                (tab===1)?
+                "Jobs by industries":(tab===2)?"Jobs by Department":(tab===3)?"Jobs in top cities":(tab===4)?"Jobs by Designation":"Jobs by Skills"
+            }
+            </button>
+            </div>
+            </div>
     </section>
 }

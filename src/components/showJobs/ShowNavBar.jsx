@@ -63,7 +63,7 @@ box-shadow:  5px 5px 3px #eeee,
 `;
 
 
-export default function ShowNavBar({name}) {
+export default function ShowNavBar({user,jobList,profile}) {
 const [searchJobContent,setSearchJobContent]=useState(false);
 const [profileContent,setProfileContent]=useState(false);
 const [serviceContent,setServiceContent]=useState(false);
@@ -72,7 +72,11 @@ const [singnOut,setSignout]=useState(false)
         setSearchJobContent(!searchJobContent)
         setProfileContent(false)
         setServiceContent(false)
+<<<<<<< HEAD
         setSignout(false)
+=======
+        
+>>>>>>> 053f0d6a9ac399e76e016e1631ce00e2849c1668
    }
 
    const handleProfile=()=>{
@@ -102,7 +106,7 @@ const [singnOut,setSignout]=useState(false)
             <div className={styles.nav_left}>
             <img src={process.env.PUBLIC_URL + "/NavBar_Logo.png"} alt="Logo" className={styles.logo}/>
                 <li className={styles.nav_tab} onClick={handleSearchJob}>Search Jobs</li>
-                <li className={styles.nav_tab} >Jobs For You</li>
+                <li className={styles.nav_tab} onClick={()=>{jobList()}} >Jobs For You</li>
                 <li className={styles.nav_tab}>Mailbox</li>
                 <li className={styles.nav_tab} onClick={handleProfile}>My Profile</li>
                 <li className={styles.nav_tab} onClick={handleServices}>Services</li>
@@ -119,7 +123,7 @@ const [singnOut,setSignout]=useState(false)
           </SearchJobs> : ""}
 
           {(profileContent)?<Profile>
-                  <p>Profile</p>
+            <p onClick={() => { profile() } }>Profile</p>
                   <p>Recrutier Action</p>
                   
           </Profile> : ""}

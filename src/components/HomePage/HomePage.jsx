@@ -21,21 +21,21 @@ export function HomePage({ home,login,register}) {
     return <React.Fragment>
         <div className={styles.homepage_body}>
         <NavBar/>
-            <Register header={header} setHeader={setHeader} home={home} login={login} register={ register}/>
+        <Register header={header} setHeader={setHeader} home={home} login={login} register={ register}/>
         <CoolPlaces />
         <TopCompanies />
-        < InfyAd />
+        <InfyAd />
         <WhyShine />
         <Premium />
         <Jobs />
         <Resume />
         <Learning />
-            <Courses />
-            <JobSearch/>
-            <Recruit/>
-            <CareerAdvice />
-            <Movies/>
-            <Footer/>
+        <Courses />
+        <JobSearch />
+        <Recruit />
+        <CareerAdvice />
+        <Movies />
+        <Footer />
         </div>
     </React.Fragment>
 } 
