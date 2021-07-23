@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "name": "Somesh Kumar Yadav",
+      "email": "somesh_nj2_076@masai.school",
+      "mobile": "6354136407",
+      "password": "12345678",
+      "id": 1
+    },
+    {
+      "name": "Ramlala",
+      "email": "someshkumar71524@gmail.com",
+      "mobile": "6354136407",
+      "password": "09876533",
+      "id": 2
+    },
+    {
+      "name": "Ramlala",
+      "email": "someshkumar71524@gmail.com",
+      "mobile": "6354136407",
+      "password": "09876533",
+      "id": 3
+    },
+    {
+      "name": "Ramlala YAdav",
+      "email": "someshkumar71524@gmail.com",
+      "mobile": "6354136407",
+      "password": "097896543",
+      "id": 4
+    },
+    {
+      "name": "Somesh Kumar Yadav",
+      "email": "someshkumar71524@gmail.com",
+      "mobile": "6354136407",
+      "password": "1234567890",
+      "id": 5
+    },
+    {
+      "name": "Somesh Kumar Yadav",
+      "email": "somesh_nj2_076@masai.school",
+      "mobile": "6354136406",
+      "password": "12345678",
+      "id": 6
+    },
+    {
+      "name": "Somesh Kumar Yadav",
+      "email": "somesh_nj2_076@masai.school",
+      "mobile": "0684136407",
+      "password": "12345678",
+      "id": 7
+    },
+    {
+      "name": "Somesh Kumar Yadav",
+      "email": "someshkumar71524@gmail.com",
+      "mobile": "9354136407",
+      "password": "12345678",
+      "id": 8
+    }
+  ]
+}

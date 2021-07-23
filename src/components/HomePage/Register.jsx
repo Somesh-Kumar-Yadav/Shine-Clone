@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "../../styles/HomePage.module.css"
-export function Register({ header, setHeader }) {
+export function Register({ header, setHeader, register, login }) {
     if (header) {
         return <section className={styles.register_2}>
             <div className={ styles.register_title}>
@@ -55,8 +55,8 @@ export function Register({ header, setHeader }) {
             </div>
             <div className={styles.register_container_right}>
                 
-                <button>Register for free</button>
-                <button>Sign in</button>
+                <button onClick={ ()=>register()}>Register for free</button>
+                <button onClick={ ()=>login()}>Sign in</button>
             </div>
             
         </div>

@@ -4,10 +4,10 @@ import { RegisterDisclamer } from "./RegisterDisclamer"
 import { RegisterNav } from "./RegisterNav"
 import { RegisterFooter } from "./RegisterFooter"
 
-export function Register() {
+export function Register({ home,register,login}) {
     return <React.Fragment>
-        <RegisterNav />
-        <RegisterContainer />
+        <RegisterNav login={login} register={register} home={ home}/>
+        <RegisterContainer login={login} register={register} home={ home} />
         <RegisterDisclamer />
         <RegisterFooter/>
     </React.Fragment>

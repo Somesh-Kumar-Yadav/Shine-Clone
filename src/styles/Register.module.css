@@ -14,6 +14,9 @@
 	justify-content: space-around;
 	box-shadow: 0 0 8px 0 rgb(0 0 0 / 21%);
 }
+.reg_navbar > img {
+	cursor: pointer;
+}
 .reg_navbar > button {
 	background-image: linear-gradient(136deg, #a296d9 0%, #7faee0 100%);
 	box-shadow: 0 0 8px 0 rgb(0 0 0 / 21%);
