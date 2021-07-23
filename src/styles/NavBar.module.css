@@ -73,6 +73,8 @@
 	margin-top: 8px;
 	width: 100%;
 	cursor: pointer;
+	display: inline-block;
+	text-align: left;
 }
 .jobs > li:hover,
 .services > li:hover,

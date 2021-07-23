@@ -5,6 +5,7 @@ import { Register } from "./components/Register/Register";
 import { Login } from "./components/Login/Login";
 import ShowJobs from "./components/showJobs/ShowJob";
 import Lists from "./components/JobList/jobList";
+import { ProfilePage } from "./components/ProfilePage/ProfilePage";
 function App() {
 	const [user, setUser] = React.useState({});
 	const [isAuth, setIsAuth] = React.useState(false);
@@ -13,12 +14,14 @@ function App() {
 	const [loginPage, setLoginPage] = React.useState(false);
 	const [showJobsPage, setShowJobsPage] = React.useState(false);
 	const [jobListPage, setJobListPage] = React.useState(false);
+	const [profilePage, setProfilePage] = React.useState(false);
 	const home = () => {
 		setLoginPage(false);
 		setRegisterPage(false);
 		setHomePage(true);
 		setShowJobsPage(false);
 		setJobListPage(false);
+		setProfilePage(false);
 	};
 	const login = () => {
 		setLoginPage(true);
@@ -26,6 +29,7 @@ function App() {
 		setRegisterPage(false);
 		setHomePage(false);
 		setJobListPage(false);
+		setProfilePage(false);
 	};
 	const register = () => {
 		setShowJobsPage(false);
@@ -33,6 +37,7 @@ function App() {
 		setRegisterPage(true);
 		setHomePage(false);
 		setJobListPage(false);
+		setProfilePage(false);
 	};
 	const showJob = () => {
 		setShowJobsPage(true);
@@ -40,6 +45,7 @@ function App() {
 		setRegisterPage(false);
 		setHomePage(false);
 		setJobListPage(false);
+		setProfilePage(false);
 	};
 	const jobList = () => {
 		setShowJobsPage(false);
@@ -47,8 +53,19 @@ function App() {
 		setRegisterPage(false);
 		setHomePage(false);
 		setJobListPage(true);
+		setProfilePage(false);
 	};
-
+	const profile = () => {
+		setShowJobsPage(false);
+		setLoginPage(false);
+		setRegisterPage(false);
+		setHomePage(false);
+		setJobListPage(false);
+		setProfilePage(true);
+	};
+	if (profilePage) {
+		return <ProfilePage user={user} />;
+	}
 	if (homePage) {
 		// if (isAuth) {
 		// 	return (
@@ -78,6 +95,8 @@ function App() {
 					home={home}
 					login={login}
 					register={register}
+					profile={profile}
+					user={user}
 				/>
 			</div>
 		);

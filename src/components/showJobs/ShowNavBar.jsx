@@ -50,7 +50,7 @@ box-shadow:  5px 5px 3px #eeee,
 `;
 
 
-export default function ShowNavBar({name,jobList}) {
+export default function ShowNavBar({user,jobList,profile}) {
 const [searchJobContent,setSearchJobContent]=useState(false);
 const [profileContent,setProfileContent]=useState(false);
 const [serviceContent,setServiceContent]=useState(false);
@@ -93,7 +93,7 @@ const [serviceContent,setServiceContent]=useState(false);
           </SearchJobs> : ""}
 
           {(profileContent)?<Profile>
-                  <p>Profile</p>
+            <p onClick={() => { profile() } }>Profile</p>
                   <p>Recrutier Action</p>
                   
           </Profile> : ""}
