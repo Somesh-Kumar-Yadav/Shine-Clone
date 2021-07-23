@@ -98,21 +98,21 @@ export default function Lists({home, jobList,user,profile,showJob}) {
                     <div className={styles.sub_menu_1}>
                           <ul>
                               <li onClick={() => {
-                                  setdata(data1.filter((e) => {
+                                  setdata(data.filter((e) => {
                                     return e.experience <= 1
                                 }))
                               }}>
                                   0 to 1 Years
                               </li>
                               <li onClick={() => {
-                                  setdata(data1.filter((e) => {
+                                  setdata(data.filter((e) => {
                                     return e.experience >= 1 && e.experience <= 3
                                 }))
                               }}>
                                   1 to 2 Years
                               </li>
                               <li onClick={() => {
-                                  setdata(data1.filter((e) => {
+                                  setdata(data.filter((e) => {
                                     return e.experience >= 3 && e.experience <= 5 
                                 }))
                               }}>
@@ -125,21 +125,21 @@ export default function Lists({home, jobList,user,profile,showJob}) {
                         <div className={styles.sub_menu_1}>
                           <ul>
                               <li onClick={() => {
-                                  setdata(data1.filter((e) => {
+                                  setdata(data.filter((e) => {
                                     return e.salary <= 3
                                 }))
                               }}>
                                   upto 3 Lakhs
                               </li>
                               <li onClick={() => {
-                                  setdata(data1.filter((e) => {
+                                  setdata(data.filter((e) => {
                                     return e.salary >= 3 && e.salary <= 5
                                 }))
                               }}>
                                   3 to 5 Lakhs
                               </li>
                               <li onClick={() => {
-                                  setdata(data1.filter((e) => {
+                                  setdata(data.filter((e) => {
                                     return e.salary >= 5 && e.salary <= 10
                                 }))
                               }}>

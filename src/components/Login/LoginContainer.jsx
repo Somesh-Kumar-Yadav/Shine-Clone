@@ -46,7 +46,7 @@ export function LoginContainer({ showJob,home, login, register,setUser,user,setI
             alert("Enter Email !!!")
         }
         else if (String(userData.password).length === 0) {
-            alert("Enter Email !!!")
+            alert("Enter Password !!!")
         }
         else {
             alert("Invalid Credentials !!!")

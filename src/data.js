@@ -1208,7 +1208,7 @@ const data = [
 		jobTitle: "Web Developer - PHP",
 		experience: 2,
 		salary: 3,
-		location: "Bangalore",
+		location: "Hyderabad",
 		keySkills: [
 			"front end",
 			"sprint planning",
@@ -1280,7 +1280,7 @@ const data = [
 		jobTitle: "PHP Developer",
 		experience: 4,
 		salary: 4,
-		location: "Bangalore",
+		location: "Pune",
 		keySkills: [
 			"front end",
 			"sprint planning",
@@ -1316,7 +1316,7 @@ const data = [
 		jobTitle: "PHP Developer",
 		experience: 5,
 		salary: 7,
-		location: "Bangalore",
+		location: "Mumbai",
 		keySkills: [
 			"front end",
 			"sprint planning",
@@ -1388,7 +1388,7 @@ const data = [
 		jobTitle: "Developer(PHP)",
 		experience: 1,
 		salary: 4,
-		location: "Delhi",
+		location: "Mumbai",
 		keySkills: [
 			"front end",
 			"sprint planning",
@@ -1424,7 +1424,7 @@ const data = [
 		jobTitle: "Java Web Developer",
 		experience: 2,
 		salary: 9,
-		location: "Delhi",
+		location: "Mumbai",
 		keySkills: [
 			"front end",
 			"sprint planning",
@@ -1460,7 +1460,7 @@ const data = [
 		jobTitle: "Java Web Developer",
 		experience: 3,
 		salary: 2,
-		location: "Bangalore",
+		location: "Chennai",
 		keySkills: [
 			"front end",
 			"sprint planning",
@@ -1532,7 +1532,7 @@ const data = [
 		jobTitle: "Web Developer-JAVA",
 		experience: 5,
 		salary: 9,
-		location: "Delhi",
+		location: "Noida",
 		keySkills: [
 			"front end",
 			"sprint planning",

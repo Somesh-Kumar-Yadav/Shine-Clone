@@ -320,11 +320,11 @@ export default function ShowJobsPage(){
              </div>
              <div>
                <img src={process.env.PUBLIC_URL + "/heydrabad.png"} alt="Logo" />
-               <p>Jobs in Hyderabab</p>
+               <p>Jobs in Hyderabad</p>
              </div>
              <div>
                <img src={process.env.PUBLIC_URL + "/banglore.png"} alt="Logo" />
-               <p>Jobs in Banglore</p>
+               <p>Jobs in Bangalore</p>
              </div>
              <div>
                <img src={process.env.PUBLIC_URL + "/chennai.png"} alt="Logo" />
