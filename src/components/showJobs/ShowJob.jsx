@@ -2,10 +2,10 @@ import ShowNavBar from "./ShowNavBar"
 import ShowJobsPage from "./ShowJobsPage"
 
 
-export default function ShowJob(){
+export default function ShowJob({jobList}){
 
  return <>
-       <ShowNavBar />
+       <ShowNavBar jobList={jobList} />
        <ShowJobsPage />
  
  

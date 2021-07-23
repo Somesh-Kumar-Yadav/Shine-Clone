@@ -4,6 +4,7 @@ import { HomePage } from "./components/HomePage/HomePage";
 import { Register } from "./components/Register/Register";
 import { Login } from "./components/Login/Login";
 import ShowJobs from "./components/showJobs/ShowJob";
+import Lists from "./components/JobList/jobList";
 function App() {
 	const [user, setUser] = React.useState({});
 	const [isAuth, setIsAuth] = React.useState(false);
@@ -11,29 +12,41 @@ function App() {
 	const [registerPage, setRegisterPage] = React.useState(false);
 	const [loginPage, setLoginPage] = React.useState(false);
 	const [showJobsPage, setShowJobsPage] = React.useState(false);
+	const [jobListPage, setJobListPage] = React.useState(false);
 	const home = () => {
 		setLoginPage(false);
 		setRegisterPage(false);
 		setHomePage(true);
 		setShowJobsPage(false);
+		setJobListPage(false);
 	};
 	const login = () => {
 		setLoginPage(true);
 		setShowJobsPage(false);
 		setRegisterPage(false);
 		setHomePage(false);
+		setJobListPage(false);
 	};
 	const register = () => {
 		setShowJobsPage(false);
 		setLoginPage(false);
 		setRegisterPage(true);
 		setHomePage(false);
+		setJobListPage(false);
 	};
 	const showJob = () => {
 		setShowJobsPage(true);
 		setLoginPage(false);
 		setRegisterPage(false);
 		setHomePage(false);
+		setJobListPage(false);
+	};
+	const jobList = () => {
+		setShowJobsPage(false);
+		setLoginPage(false);
+		setRegisterPage(false);
+		setHomePage(false);
+		setJobListPage(true);
 	};
 
 	if (homePage) {
@@ -60,7 +73,19 @@ function App() {
 	if (showJobsPage) {
 		return (
 			<div className="App">
-				<ShowJobs home={home} login={login} register={register} />
+				<ShowJobs
+					jobList={jobList}
+					home={home}
+					login={login}
+					register={register}
+				/>
+			</div>
+		);
+	}
+	if (jobListPage) {
+		return (
+			<div className="App">
+				<Lists home={home} login={login} register={register} />
 			</div>
 		);
 	}

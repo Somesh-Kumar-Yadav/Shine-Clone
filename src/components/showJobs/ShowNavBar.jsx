@@ -50,7 +50,7 @@ box-shadow:  5px 5px 3px #eeee,
 `;
 
 
-export default function ShowNavBar({name}) {
+export default function ShowNavBar({name,jobList}) {
 const [searchJobContent,setSearchJobContent]=useState(false);
 const [profileContent,setProfileContent]=useState(false);
 const [serviceContent,setServiceContent]=useState(false);
@@ -58,6 +58,7 @@ const [serviceContent,setServiceContent]=useState(false);
         setSearchJobContent(!searchJobContent)
         setProfileContent(false)
         setServiceContent(false)
+        
    }
 
    const handleProfile=()=>{
@@ -76,7 +77,7 @@ const [serviceContent,setServiceContent]=useState(false);
             <div className={styles.nav_left}>
             <img src={process.env.PUBLIC_URL + "/NavBar_Logo.png"} alt="Logo" className={styles.logo}/>
                 <li className={styles.nav_tab} onClick={handleSearchJob}>Search Jobs</li>
-                <li className={styles.nav_tab} >Jobs For You</li>
+                <li className={styles.nav_tab} onClick={()=>{jobList()}} >Jobs For You</li>
                 <li className={styles.nav_tab}>Mailbox</li>
                 <li className={styles.nav_tab} onClick={handleProfile}>My Profile</li>
                 <li className={styles.nav_tab} onClick={handleServices}>Services</li>
