@@ -76,6 +76,13 @@
       "mobile": "9876543210",
       "password": "12345678",
       "id": 11
+    },
+    {
+      "name": "Dhruvasurya K N",
+      "email": "surya@gmail.com",
+      "mobile": "9876543210",
+      "password": "12345678",
+      "id": 12
     }
   ]
 }

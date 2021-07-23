@@ -106,14 +106,14 @@ export default function Lists({home, jobList,user,profile,showJob}) {
                               </li>
                               <li onClick={() => {
                                   setdata(data1.filter((e) => {
-                                    return e.experience <= 2 && e.experience >= 1
+                                    return e.experience >= 1 && e.experience <= 3
                                 }))
                               }}>
                                   1 to 2 Years
                               </li>
                               <li onClick={() => {
                                   setdata(data1.filter((e) => {
-                                    return e.experience <= 5 && e.experience > 2 
+                                    return e.experience >= 3 && e.experience <= 5 
                                 }))
                               }}>
                                   3 to 5 years

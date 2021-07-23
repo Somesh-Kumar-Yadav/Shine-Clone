@@ -75,7 +75,6 @@ const [singnOut,setSignout]=useState(false)
       setSignout(false)
       showJob()
   }
-
    const handleProfile=()=>{
     setSearchJobContent(false)
     setProfileContent(!profileContent)
