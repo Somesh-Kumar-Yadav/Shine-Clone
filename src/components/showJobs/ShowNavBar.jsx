@@ -48,28 +48,54 @@ box-shadow:  5px 5px 3px #eeee,
  }             
 
 `;
+const SignOut=styled.div`
+width: 8%;
+background-color: #ffffff;
+color: #707070;
+ position: absolute;
+ top: 5.8%;
+ left: 88%;
+ cursor: pointer;
+padding: 0.5%;
+box-shadow:  5px 5px 3px #eeee,
+             -5px -5px 3px #ffff;
+
+`;
 
 
 export default function ShowNavBar({name}) {
 const [searchJobContent,setSearchJobContent]=useState(false);
 const [profileContent,setProfileContent]=useState(false);
 const [serviceContent,setServiceContent]=useState(false);
+const [singnOut,setSignout]=useState(false)
     const handleSearchJob=()=>{
         setSearchJobContent(!searchJobContent)
         setProfileContent(false)
         setServiceContent(false)
+        setSignout(false)
    }
 
    const handleProfile=()=>{
     setSearchJobContent(false)
     setProfileContent(!profileContent)
     setServiceContent(false)
+    setSignout(false)
    }
 
  const handleServices=()=>{
     setServiceContent(!serviceContent)
     setSearchJobContent(false)
     setProfileContent(false)
+    setSignout(false)
+ }
+
+ const handleSignprofile=()=>{
+    setSignout(!singnOut)
+    setSearchJobContent(false)
+    setProfileContent(false)
+    setServiceContent(false)
+
+
  }
 
     return  <nav className={styles.nav}>
@@ -82,6 +108,7 @@ const [serviceContent,setServiceContent]=useState(false);
                 <li className={styles.nav_tab} onClick={handleServices}>Services</li>
             <li className={styles.career_guidance}><img src={process.env.PUBLIC_URL + "./Career_bulb.PNG"  } alt="career"/>Career Guidance</li>
             </div>
+            <div className={styles.nav_profile} onClick={handleSignprofile}>{"hi, dhruvasurya"}</div>
           {(searchJobContent)?<SearchJobs>
                   <p>Jobs by City</p>
                   <p>Jobs by Skills</p>
@@ -118,6 +145,15 @@ const [serviceContent,setServiceContent]=useState(false);
                    </div>
                   
           </Service> : ""}
+
+          {(singnOut)?<SignOut>
+              <p>Account setting</p>
+            <p>Sign Out</p>
+
+
+          </SignOut>: ""
+
+          }
             
             
     </nav>
