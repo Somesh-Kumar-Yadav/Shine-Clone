@@ -63,7 +63,7 @@ box-shadow:  5px 5px 3px #eeee,
 `;
 
 
-export default function ShowNavBar({user,jobList,profile}) {
+export default function ShowNavBar({home,user,jobList,profile,showJob}) {
 const [searchJobContent,setSearchJobContent]=useState(false);
 const [profileContent,setProfileContent]=useState(false);
 const [serviceContent,setServiceContent]=useState(false);
@@ -72,12 +72,9 @@ const [singnOut,setSignout]=useState(false)
         setSearchJobContent(!searchJobContent)
         setProfileContent(false)
         setServiceContent(false)
-<<<<<<< HEAD
-        setSignout(false)
-=======
-        
->>>>>>> 053f0d6a9ac399e76e016e1631ce00e2849c1668
-   }
+      setSignout(false)
+      showJob()
+  }
 
    const handleProfile=()=>{
     setSearchJobContent(false)
@@ -112,7 +109,7 @@ const [singnOut,setSignout]=useState(false)
                 <li className={styles.nav_tab} onClick={handleServices}>Services</li>
             <li className={styles.career_guidance}><img src={process.env.PUBLIC_URL + "./Career_bulb.PNG"  } alt="career"/>Career Guidance</li>
             </div>
-            <div className={styles.nav_profile} onClick={handleSignprofile}>{"hi, dhruvasurya"}</div>
+            <div className={styles.nav_profile} onClick={handleSignprofile}>{"hi, "+user.name}</div>
           {(searchJobContent)?<SearchJobs>
                   <p>Jobs by City</p>
                   <p>Jobs by Skills</p>
@@ -123,8 +120,8 @@ const [singnOut,setSignout]=useState(false)
           </SearchJobs> : ""}
 
           {(profileContent)?<Profile>
-            <p onClick={() => { profile() } }>Profile</p>
-                  <p>Recrutier Action</p>
+        <p style={{ cursor:"pointer",marginTop:"5px"}} onClick={() => { profile() } }>Profile</p>
+                  <p style={{ cursor:"pointer",marginTop:"5px"}}>Recrutier Action</p>
                   
           </Profile> : ""}
           {(serviceContent)?<Service>
@@ -151,8 +148,13 @@ const [singnOut,setSignout]=useState(false)
           </Service> : ""}
 
           {(singnOut)?<SignOut>
-              <p>Account setting</p>
-            <p>Sign Out</p>
+              <p style={{ cursor:"pointer",margin:"5px"}}>Account setting</p>
+        <p onClick={() => {
+          alert("You Have Successfully logged out");
+          setTimeout(() => {
+  home();
+}, 100);
+        }} style={{ cursor:"pointer",margin:"5px"}}>Sign Out</p>
 
 
           </SignOut>: ""

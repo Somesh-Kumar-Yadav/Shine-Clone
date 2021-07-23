@@ -309,7 +309,7 @@ export default function ShowJobsPage(){
            
            <City>
            <Heading>Browse Jobs in Top Cities</Heading>
-           <div>
+           <div style={{marginTop:"10px"}}>
              <div>
                <img src={process.env.PUBLIC_URL + "/deli.png"} alt="Logo" />
                <p>Jobs in Delhi</p>
@@ -341,25 +341,25 @@ export default function ShowJobsPage(){
            </City>
           <Company>
           <Heading>Browse Jobs in Top Companies</Heading>
-           <div>
+           <div style={{marginTop:"10px"}}>
              <div>
-               <img src={process.env.PUBLIC_URL + "/angle.png"} alt="Logo" />
+               <img style={{width:"95%"}} src={process.env.PUBLIC_URL + "/angle.png"} alt="Logo" />
               
              </div>
              <div>
-               <img src={process.env.PUBLIC_URL + "/hew.png"} alt="Logo" />
+               <img style={{width:"95%"}} src={process.env.PUBLIC_URL + "/hew.png"} alt="Logo" />
                
              </div>
              <div>
-               <img src={process.env.PUBLIC_URL + "/iifl.png"} alt="Logo" />
+               <img style={{width:"95%"}} src={process.env.PUBLIC_URL + "/iifl.png"} alt="Logo" />
             
              </div>
              <div>
-               <img src={process.env.PUBLIC_URL + "/reliance.png"} alt="Logo" />
+               <img style={{width:"95%"}} src={process.env.PUBLIC_URL + "/reliance.png"} alt="Logo" />
            
              </div>
              <div>
-               <img src={process.env.PUBLIC_URL + "/yes.png"} alt="Logo" />
+               <img style={{width:"95%"}} src={process.env.PUBLIC_URL + "/yes.png"} alt="Logo" />
               
              </div>
             
@@ -371,7 +371,7 @@ export default function ShowJobsPage(){
              </Company>
             <Skill>
             <Heading>Browse Jobs by Skill</Heading>
-           <div>
+           <div style={{marginTop:"10px"}}>
              <div>
                <img src={process.env.PUBLIC_URL + "/java.png"} alt="Logo" />
                <p>JAVA jobs</p>

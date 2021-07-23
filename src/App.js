@@ -64,7 +64,17 @@ function App() {
 		setProfilePage(true);
 	};
 	if (profilePage) {
-		return <ProfilePage user={user} />;
+		return (
+			<ProfilePage
+				jobList={jobList}
+				home={home}
+				login={login}
+				register={register}
+				profile={profile}
+				user={user}
+				showJob={showJob}
+			/>
+		);
 	}
 	if (homePage) {
 		// if (isAuth) {
@@ -97,6 +107,7 @@ function App() {
 					register={register}
 					profile={profile}
 					user={user}
+					showJob={showJob}
 				/>
 			</div>
 		);
@@ -104,7 +115,15 @@ function App() {
 	if (jobListPage) {
 		return (
 			<div className="App">
-				<Lists home={home} login={login} register={register} />
+				<Lists
+					jobList={jobList}
+					home={home}
+					login={login}
+					register={register}
+					profile={profile}
+					user={user}
+					showJob={showJob}
+				/>
 			</div>
 		);
 	}

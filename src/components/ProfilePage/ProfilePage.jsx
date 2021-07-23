@@ -1,11 +1,11 @@
 import React from "react"
 import ShowNavBar from "../showJobs/ShowNavBar"
 import { ProfileContainer } from "./ProfileContainer"
-import { RegisterFooter } from "../Register/RegisterFooter"
-export function ProfilePage({ user}) {
+import { LoginFooter } from "../Login/LoginFooter"
+export function ProfilePage({home, jobList,user,profile,showJob}) {
     return <React.Fragment>
-        <ShowNavBar />
+        <ShowNavBar home={home} jobList={jobList} user={user} showJob={showJob} profile={ profile}/>
         <ProfileContainer user={user} />
-        <RegisterFooter/>
+        <LoginFooter/>
     </React.Fragment>
 }

@@ -2,10 +2,10 @@ import ShowNavBar from "./ShowNavBar"
 import ShowJobsPage from "./ShowJobsPage"
 
 
-export default function ShowJob({jobList,user,profile}){
+export default function ShowJob({home, jobList,user,profile,showJob}){
 
  return <>
-       <ShowNavBar jobList={jobList} user={user} profile={ profile}/>
+       <ShowNavBar home={home} jobList={jobList} user={user} showJob={showJob} profile={ profile}/>
        <ShowJobsPage />
  
  

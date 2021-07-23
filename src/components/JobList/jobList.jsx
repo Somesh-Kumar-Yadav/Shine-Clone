@@ -6,7 +6,7 @@ import ShowNavBar from '../showJobs/ShowNavBar'
 import {data} from '../../data.js'
 
 
-export default function Lists() {
+export default function Lists({home, jobList,user,profile,showJob}) {
 
 
     
@@ -31,7 +31,7 @@ export default function Lists() {
     }
     return (
         <div className="main">
-            <ShowNavBar/>
+            <ShowNavBar home={home} jobList={jobList} user={user} profile={profile} showJob={ showJob}/>
             <div  className="filter">
                 <div className="input">
                    <input type="text" />
