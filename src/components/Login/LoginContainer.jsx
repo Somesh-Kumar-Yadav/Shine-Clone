@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react"
 import styles from "../../styles/Login.module.css"
-export function LoginContainer({ home, login, register,setUser,user,setIsAuth }) {
+export function LoginContainer({ showJob,home, login, register,setUser,user,setIsAuth }) {
     const payload = {
         email: "",
         password:""
@@ -32,6 +32,10 @@ export function LoginContainer({ home, login, register,setUser,user,setIsAuth })
             setUser({ ...data[data.length - 1] });
             setIsAuth(true);
             alert("You have Successfully logged in !!!");
+            setTimeout(() => {
+                showJob();
+            }, 1500);
+
         }
     }
     const HandleLogin = () => {
