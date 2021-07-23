@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import '../../styles/jobList.css'
+import styles from '../../styles/jobList.module.css'
 import ShowNavBar from '../showJobs/ShowNavBar'
 import {data} from '../../data.js'
 
@@ -29,18 +29,18 @@ export default function Lists({home, jobList,user,profile,showJob}) {
             return el.id === temp;
         }))
     }
-    return (
-        <div className="main">
+    return (<>
             <ShowNavBar home={home} jobList={jobList} user={user} profile={profile} showJob={ showJob}/>
-            <div  className="filter">
-                <div className="input">
-                   <input type="text" />
+        <div className={styles.main}>
+            <div  className={styles.filter}>
+                <div className={styles.input}>
+                   <input type={styles.text} />
                    <i className="fas fa-search fa-lg"></i>
                 </div>
                 <p>Filter by</p>
                 <ul >
-                    <li className="active"><span> Location <i className="fas fa-chevron-down"></i></span>
-                      <div className="sub-menu-1">
+                    <li className={styles.active}><span> Location <i className="fas fa-chevron-down"></i></span>
+                      <div className={styles.sub_menu_1}>
                           <ul>
                               <li onClick={() => {
                                   setdata(data.filter((e) => {
@@ -95,7 +95,7 @@ export default function Lists({home, jobList,user,profile,showJob}) {
                       </div>
                     </li>
                     <li><span> Experience <i className="fas fa-chevron-down"></i></span>
-                    <div className="sub-menu-1">
+                    <div className={styles.sub_menu_1}>
                           <ul>
                               <li onClick={() => {
                                   setdata(data1.filter((e) => {
@@ -122,7 +122,7 @@ export default function Lists({home, jobList,user,profile,showJob}) {
                       </div>
                     </li>
                     <li> <span>Salary <i className="fas fa-chevron-down"></i></span>
-                    <div className="sub-menu-1">
+                        <div className={styles.sub_menu_1}>
                           <ul>
                               <li onClick={() => {
                                   setdata(data1.filter((e) => {
@@ -150,8 +150,8 @@ export default function Lists({home, jobList,user,profile,showJob}) {
                     </li>
                 </ul>
             </div>
-            <div className="container">
-            <div className="leftList">
+            <div className={styles.container}>
+            <div className={styles.leftList}>
                 {data1.map((e) => {
                     return <div keyid={e.id} onClick={() => handleClick(e.id)} >
                         
@@ -165,8 +165,8 @@ export default function Lists({home, jobList,user,profile,showJob}) {
                     </div>
                 })}
             </div>
-            <div className="details">
-                <div className="head">
+                <div className={styles.details}>
+                <div className={styles.head}>
                     <button><i className="fas fa-gem"></i> Premium</button>
                     <h2>{selected[0].jobTitle}</h2>
                     <h4>{selected[0].aboutCompany[0]}</h4>
@@ -175,18 +175,18 @@ export default function Lists({home, jobList,user,profile,showJob}) {
                     <i className="fas fa-money-bill-wave"></i><span>-{selected[0].salary} Lakhs</span>
                     <strong>Posted on: {selected[0].date}</strong>
                     <br />
-                    <button id="apply" style={{color:status[1], background:status[2]}} onClick={()=>{
+                        <button id={styles.apply} style={{color:status[1], background:status[2]}} onClick={()=>{
                         setStatus(["Applied","rgb(72, 214, 29)","white"])
                     }}><h3>{status[0]}</h3></button>
                 </div>
-                <div className="skills">
+                    <div className={styles.skills}>
                     <h3>Key Skills</h3>
                     {selected[0].keySkills.map((e) => {
                         return <button>{e}</button>
                     })}
                     <p><button>Take Assessments to Stand Out to Recruiters. <i className="fas fa-graduation-cap fa-lg"></i></button></p>
                 </div>
-                <div className="jobDetails">
+                    <div className={styles.jobDetails}>
                     <h3>Job Details</h3>
                     <ul>
                     {selected[0].jobdetail.map((e)=>{
@@ -202,24 +202,24 @@ export default function Lists({home, jobList,user,profile,showJob}) {
                     </ul>
                     
                 </div>
-                <div className="insights">
+                    <div className={styles.insights}>
                     <h3>Application Insights</h3>
                     <p>Based on all applications received for this job</p>
                     <div>
                         <h4>Work-Experience</h4>
                         <p>Applications have 0-1 years  </p>
-                        <button className="brick1"></button>
+                        <button className={styles.brick1}></button>
                         <h4>93%</h4>
                         <p>Applications have 1-2 years  </p>
-                        <button className="brick2"></button>
+                        <button className={styles.brick2}></button>
                         <h4>4%</h4>
                         <p>Applications have 2+ years  </p>
-                        <button className="brick3"></button>
+                            <button className={styles.brick3}></button>
                         <h4>3%</h4>
                     </div>
                 </div>
             </div>
             </div>
         </div>
-    )
+ </>   )
 }

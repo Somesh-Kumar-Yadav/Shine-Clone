@@ -587,9 +587,10 @@
 }
 .register_container {
 	display: flex;
-	justify-content: space-around;
-	align-items: flex-start;
+	justify-content: space-between;
+	align-items: center;
 	position: relative;
+	width: 100vw;
 }
 .register_container_left {
 	display: flex;
@@ -627,12 +628,12 @@
 }
 .register_container_right {
 	margin-left: 180px;
-	width: 430px;
-	position: relative;
+	width: 400px;
+	position: absolute;
 	font-size: 1rem;
 	font-weight: 400;
-	top: -70px;
-	left: 70px;
+	top: -20px;
+	right: 50px;
 	line-height: 1.5;
 	height: 167px;
 	border-radius: 5px;
