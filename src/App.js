@@ -6,7 +6,14 @@ import { Login } from "./components/Login/Login";
 import ShowJobs from "./components/showJobs/ShowJob";
 import Lists from "./components/JobList/jobList";
 import { ProfilePage } from "./components/ProfilePage/ProfilePage";
+import { PostJob } from "./components/PostJob/PostJob";
 function App() {
+	return (
+		<div className="App">
+			<PostJob />
+		</div>
+	);
+
 	let value = localStorage.getItem("isAuth");
 	if (value === null) {
 		value = false;
@@ -21,7 +28,6 @@ function App() {
 		value = false;
 		localStorage.setItem("isAuth", value);
 	}
-	// console.log(userObject);
 	const [user, setUser] = React.useState(userObject[0]);
 	const [isAuth, setIsAuth] = React.useState(value);
 	const [homePage, setHomePage] = React.useState(true);
