@@ -13,6 +13,18 @@ export default function Lists({setIsAuth,home, jobList,user,profile,showJob}) {
     const[data1,setdata] =useState(data)
     const[selected,setSelected] = useState(data1)
     const[status,setStatus] = useState(["Apply Here","white"])
+    const[input,setInput] = useState("")
+
+    const handleChange = function(e){
+        setInput(e.target.value)
+        console.log(input)
+    }
+
+    const handleSearch = function(){
+        setdata(data.filter((e) => {
+            return e.searchKey === input;
+        }))
+    }
 
     useEffect(() => {
         setSelected(data1);
@@ -34,8 +46,8 @@ export default function Lists({setIsAuth,home, jobList,user,profile,showJob}) {
         <div className={styles.main}>
             <div  className={styles.filter}>
                 <div className={styles.input}>
-                   <input type={styles.text} />
-                   <i className="fas fa-search fa-lg"></i>
+                   <input type={styles.text} onChange={handleChange} placeholder="Job skills" />
+                   <i className="fas fa-search fa-lg" onClick={handleSearch}></i>
                 </div>
                 <p>Filter by</p>
                 <ul >
