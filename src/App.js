@@ -8,12 +8,6 @@ import Lists from "./components/JobList/jobList";
 import { ProfilePage } from "./components/ProfilePage/ProfilePage";
 import { PostJob } from "./components/PostJob/PostJob";
 function App() {
-	return (
-		<div className="App">
-			<PostJob />
-		</div>
-	);
-
 	let value = localStorage.getItem("isAuth");
 	if (value === null) {
 		value = false;
