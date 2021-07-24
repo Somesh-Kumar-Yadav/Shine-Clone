@@ -5,7 +5,6 @@ export function PostJob(){
     return(
         <div className={styles.body}>
            <div className={styles.secnav}>
-               <div></div>
 
                <div className={styles.deactive}>
                    <img className={styles.img1} src={process.env.PUBLIC_URL+`tick.png`} alt="tick"/>

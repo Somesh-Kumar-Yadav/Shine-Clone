@@ -16,7 +16,7 @@ function App() {
 	let userObject = JSON.parse(localStorage.getItem("user"));
 	if (userObject === null) {
 		userObject = [{}];
-		localStorage.setItem(JSON.stringify(userObject));
+		localStorage.setItem("user", JSON.stringify(userObject));
 	}
 	if (value === null) {
 		value = false;
