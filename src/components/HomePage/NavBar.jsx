@@ -1,10 +1,10 @@
 import React from "react"
 import styles from "../../styles/NavBar.module.css"
 
-export function NavBar() {
+export function NavBar({home,post}) {
     return <nav className={styles.nav}>
             <div className={styles.nav_left}>
-            <img src={process.env.PUBLIC_URL + "/NavBar_Logo.png"} alt="Logo" className={styles.logo}/>
+            <img style={{cursor:"pointer"}} onClick={()=>{home()}} src={process.env.PUBLIC_URL + "/NavBar_Logo.png"} alt="Logo" className={styles.logo}/>
             <div className={styles.drop_down}>
             <li className={styles.nav_tab}>Search Jobs</li>
             <div className={styles.jobs}>
@@ -49,7 +49,7 @@ export function NavBar() {
             </div>
             <div className={styles.nav_right}>
                 <li>Create job alert</li>
-                <li>Post a job</li>
+                <li onClick={()=>{post()}}>Post a job</li>
                 <div className={styles.nav_right_contact}>
                     <li>080-471055555</li>
                     <li>9am-6pm, Mon to Sat</li>

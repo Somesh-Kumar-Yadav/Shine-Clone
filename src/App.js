@@ -30,6 +30,7 @@ function App() {
 	const [showJobsPage, setShowJobsPage] = React.useState(false);
 	const [jobListPage, setJobListPage] = React.useState(false);
 	const [profilePage, setProfilePage] = React.useState(false);
+	const [postJobPage, setPostJobPage] = React.useState(false);
 	const home = () => {
 		setLoginPage(false);
 		setRegisterPage(false);
@@ -37,8 +38,19 @@ function App() {
 		setShowJobsPage(false);
 		setJobListPage(false);
 		setProfilePage(false);
+		setPostJobPage(false);
+	};
+	const post = () => {
+		setPostJobPage(true);
+		setLoginPage(false);
+		setShowJobsPage(false);
+		setRegisterPage(false);
+		setHomePage(false);
+		setJobListPage(false);
+		setProfilePage(false);
 	};
 	const login = () => {
+		setPostJobPage(false);
 		setLoginPage(true);
 		setShowJobsPage(false);
 		setRegisterPage(false);
@@ -47,6 +59,7 @@ function App() {
 		setProfilePage(false);
 	};
 	const register = () => {
+		setPostJobPage(false);
 		setShowJobsPage(false);
 		setLoginPage(false);
 		setRegisterPage(true);
@@ -55,6 +68,7 @@ function App() {
 		setProfilePage(false);
 	};
 	const showJob = () => {
+		setPostJobPage(false);
 		setShowJobsPage(true);
 		setLoginPage(false);
 		setRegisterPage(false);
@@ -63,6 +77,7 @@ function App() {
 		setProfilePage(false);
 	};
 	const jobList = () => {
+		setPostJobPage(false);
 		setShowJobsPage(false);
 		setLoginPage(false);
 		setRegisterPage(false);
@@ -71,6 +86,7 @@ function App() {
 		setProfilePage(false);
 	};
 	const profile = () => {
+		setPostJobPage(false);
 		setShowJobsPage(false);
 		setLoginPage(false);
 		setRegisterPage(false);
@@ -89,6 +105,21 @@ function App() {
 				user={user}
 				showJob={showJob}
 				setIsAuth={setIsAuth}
+			/>
+		);
+	}
+	if (postJobPage) {
+		return (
+			<PostJob
+				jobList={jobList}
+				home={home}
+				login={login}
+				register={register}
+				profile={profile}
+				user={user}
+				showJob={showJob}
+				setIsAuth={setIsAuth}
+				post={post}
 			/>
 		);
 	}
@@ -112,7 +143,7 @@ function App() {
 		} else {
 			return (
 				<div className="App">
-					<HomePage home={home} login={login} register={register} />
+					<HomePage post={post} home={home} login={login} register={register} />
 				</div>
 			);
 		}

@@ -31,7 +31,7 @@ export function RegisterContainer({login}) {
         } else if (userData.name.length === 0) {
             alert("Enter UserName !!!")
         }
-            else if (userData.name.length === 0) {
+            else if (userData.email.length === 0) {
             alert("Enter Email !!!")
         }
              else if (String(userData.mobile).length !== 10) {
