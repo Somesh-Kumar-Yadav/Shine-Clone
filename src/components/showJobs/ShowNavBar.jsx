@@ -63,7 +63,7 @@ box-shadow:  5px 5px 3px #eeee,
 `;
 
 
-export default function ShowNavBar({home,user,jobList,profile,showJob}) {
+export default function ShowNavBar({setIsAuth,home,user,jobList,profile,showJob}) {
 const [searchJobContent,setSearchJobContent]=useState(false);
 const [profileContent,setProfileContent]=useState(false);
 const [serviceContent,setServiceContent]=useState(false);
@@ -150,8 +150,11 @@ const [singnOut,setSignout]=useState(false)
               <p style={{ cursor:"pointer",margin:"5px"}}>Account setting</p>
         <p onClick={() => {
           alert("You Have Successfully logged out");
+          localStorage.setItem("isAuth", false);
+          localStorage.setItem("user", JSON.stringify([{}]));
+          setIsAuth(false);
           setTimeout(() => {
-  home();
+            home();
 }, 100);
         }} style={{ cursor:"pointer",margin:"5px"}}>Sign Out</p>
 

@@ -7,8 +7,23 @@ import ShowJobs from "./components/showJobs/ShowJob";
 import Lists from "./components/JobList/jobList";
 import { ProfilePage } from "./components/ProfilePage/ProfilePage";
 function App() {
-	const [user, setUser] = React.useState({});
-	const [isAuth, setIsAuth] = React.useState(false);
+	let value = localStorage.getItem("isAuth");
+	if (value === null) {
+		value = false;
+		localStorage.setItem("isAuth", value);
+	}
+	let userObject = JSON.parse(localStorage.getItem("user"));
+	if (userObject === null) {
+		userObject = [{}];
+		localStorage.setItem(JSON.stringify(userObject));
+	}
+	if (value === null) {
+		value = false;
+		localStorage.setItem("isAuth", value);
+	}
+	// console.log(userObject);
+	const [user, setUser] = React.useState(userObject[0]);
+	const [isAuth, setIsAuth] = React.useState(value);
 	const [homePage, setHomePage] = React.useState(true);
 	const [registerPage, setRegisterPage] = React.useState(false);
 	const [loginPage, setLoginPage] = React.useState(false);
@@ -73,22 +88,34 @@ function App() {
 				profile={profile}
 				user={user}
 				showJob={showJob}
+				setIsAuth={setIsAuth}
 			/>
 		);
 	}
-	if (homePage) {
-		// if (isAuth) {
-		// 	return (
-		// 		<div className="App">
-		// 			<ShowJobs home={home} login={login} register={register} />
-		// 		</div>
-		// 	);
-		// }
-		return (
-			<div className="App">
-				<HomePage home={home} login={login} register={register} />
-			</div>
-		);
+	// console.log(isAuth);
+	if (homePage === true) {
+		if (isAuth === "true" || isAuth === true) {
+			return (
+				<div className="App">
+					<ShowJobs
+						jobList={jobList}
+						home={home}
+						login={login}
+						register={register}
+						profile={profile}
+						user={user}
+						setIsAuth={setIsAuth}
+						showJob={showJob}
+					/>
+				</div>
+			);
+		} else {
+			return (
+				<div className="App">
+					<HomePage home={home} login={login} register={register} />
+				</div>
+			);
+		}
 	}
 	if (registerPage) {
 		return (
@@ -108,6 +135,7 @@ function App() {
 					profile={profile}
 					user={user}
 					showJob={showJob}
+					setIsAuth={setIsAuth}
 				/>
 			</div>
 		);
@@ -123,6 +151,7 @@ function App() {
 					profile={profile}
 					user={user}
 					showJob={showJob}
+					setIsAuth={setIsAuth}
 				/>
 			</div>
 		);

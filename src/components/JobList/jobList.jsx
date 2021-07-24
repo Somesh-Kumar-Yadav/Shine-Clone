@@ -6,7 +6,7 @@ import ShowNavBar from '../showJobs/ShowNavBar'
 import {data} from '../../data.js'
 
 
-export default function Lists({home, jobList,user,profile,showJob}) {
+export default function Lists({setIsAuth,home, jobList,user,profile,showJob}) {
 
 
     
@@ -30,7 +30,7 @@ export default function Lists({home, jobList,user,profile,showJob}) {
         }))
     }
     return (<>
-            <ShowNavBar home={home} jobList={jobList} user={user} profile={profile} showJob={ showJob}/>
+            <ShowNavBar setIsAuth={setIsAuth} home={home} jobList={jobList} user={user} profile={profile} showJob={ showJob}/>
         <div className={styles.main}>
             <div  className={styles.filter}>
                 <div className={styles.input}>
