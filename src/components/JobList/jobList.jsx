@@ -21,9 +21,13 @@ export default function Lists({setIsAuth,home, jobList,user,profile,showJob}) {
     }
 
     const handleSearch = function(){
-        setdata(data.filter((e) => {
+        let searched = data.filter((e) => {
             return e.searchKey === input;
-        }))
+        })
+        console.log(searched)
+        if(searched.length !== 0){
+            setdata(searched)
+        }
     }
 
     useEffect(() => {
