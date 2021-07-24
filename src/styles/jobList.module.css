@@ -27,6 +27,8 @@
 .input > input {
   width: 430px;
   height: 35px;
+  margin-left: 0.3rem;
+  padding-left: 0.4rem;
 }
 .input > i {
   /* padding: 0.3rem; */
