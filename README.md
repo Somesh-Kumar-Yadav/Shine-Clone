@@ -1,12 +1,6 @@
 # Shine.com Clone
 
-Please visit the website [shine.com](add url here).
-
-Or copy the link below, in your browser
-
-```
-add url here
-```
+In this project we made fully-functional clone of Shine website that provides internship to students or an employer on a hunt for their dreams.
 
 ## Using the website
 
