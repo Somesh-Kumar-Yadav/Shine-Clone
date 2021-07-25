@@ -2,15 +2,15 @@
 
 In this project we made fully-functional clone of Shine website that provides user to search for a job and job provider to post a job .
 
-## Using the website
-
-### Technologies used
+### Technologies & Libraries used
 
 In this project, a few technologies and packages were used, listed below
 
 1. reactJS
 2. styled component
 3. axios
+4. css
+5. json-server
 
 ## Functionalities associated with this website
 
@@ -21,30 +21,36 @@ In this project, a few technologies and packages were used, listed below
 5. User can apply for the job based on his choice.
 6. Recruiter can also post a job based on his requirement .
 
-## Some of the snaps from the app
+## Authors
 
-### Landing Page
+- [@Somesh-Kumar-Yadav](https://github.com/Somesh-Kumar-Yadav)
+- [@Dhruvsurya](https://github.com/dhruva-surya)
+- [@Nitish-Kumar](https://github.com/nitishVrma)
+- [@Vishnu-Sankar](https://github.com/vishnusankarmasai)
+## Contributing
 
-![Landingpage](add page path url)
+Contributions are always welcome!
 
-### Landing page
+You can contribute with us to make this more functionable.
+  
+## Lessons Learned
 
-![Register page]("https://github.com/Somesh-Kumar-Yadav/Shine-Clone/tree/master/screenshots/HomePage.png")
+We are a learner and this is our second clone so faced many issues to build this site. These are some topic that challenges us to make this:-
+- Linking to Pages
+- Database 
+- Api Search
+  
+## Optimizations
 
-### Courses page
+We made this website so much optimized way as compared to the original website we write less no. Of code and more functional.
+  
+## Support
 
-![search for Job Page]()
+For support, email  
 
-### Landing page
+dhruva_nj2_108@masai.school or
+vishnu_nj2_010@masai.school or
+nitish_nj2_142@masai.school or
+somesh_nj2_076@masai.school
 
-![Finding Job Page]()
-
-### Notes page
-
-![Post a job Page]()
-
-### Video page
-
-![Video page]()
-
-## And lastly, I want to take this opportunity to thank you for visiting here.
+Join our Slack channel.
