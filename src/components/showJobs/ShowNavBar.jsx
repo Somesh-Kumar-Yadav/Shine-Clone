@@ -106,7 +106,7 @@ const [singnOut,setSignout]=useState(false)
                 <li className={styles.nav_tab}>Mailbox</li>
                 <li className={styles.nav_tab} onClick={handleProfile}>My Profile</li>
                 <li className={styles.nav_tab} onClick={handleServices}>Services</li>
-            <li className={styles.career_guidance}><img src={process.env.PUBLIC_URL + "./Career_bulb.PNG"  } alt="career"/>Career Guidance</li>
+            <li className={styles.career_guidance}><img src={process.env.PUBLIC_URL + "/Career_bulb.png"  } alt="career"/>Career Guidance</li>
             </div>
             <div className={styles.nav_profile} onClick={handleSignprofile}>{"hi, "+user.name}</div>
           {(searchJobContent)?<SearchJobs>

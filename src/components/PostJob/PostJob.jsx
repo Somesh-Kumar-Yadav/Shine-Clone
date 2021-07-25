@@ -76,17 +76,17 @@ export function PostJob({ home, post }) {
            <div className={styles.secnav}>
 
                <div className={styles.deactive}>
-                    <img className={styles.img2} src={process.env.PUBLIC_URL+`package.png`} alt="packaged"/>
+                    <img className={styles.img2} src={process.env.PUBLIC_URL+`/package.png`} alt="packaged"/>
                     <strong className={styles.s1}>Package details</strong>
                </div>
 
                 <div className={styles.personal}>
-               <img src={process.env.PUBLIC_URL+`avatar2.png`} alt="avatar2"/>
+               <img src={process.env.PUBLIC_URL+`/avatar2.png`} alt="avatar2"/>
                     <strong className={styles.s1}>Personal details</strong>
                </div>
 
                <div className={styles.payment}>
-               <img src={process.env.PUBLIC_URL+`payment.png`} alt="payment"/>
+               <img src={process.env.PUBLIC_URL+`/payment.png`} alt="payment"/>
                    <strong className={styles.s1}>Payment mode</strong>
                    </div>
            </div>
