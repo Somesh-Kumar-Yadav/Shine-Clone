@@ -29,7 +29,7 @@ In this project, a few technologies and packages were used, listed below
 
 ### Landing page
 
-![Register page](https://github.com/rohitkumar0427/pluralWebsite/blob/master/projectImages/comparison.JPG)
+![Register page](https://github.com/Somesh-Kumar-Yadav/Shine-Clone/tree/master/screenshots/HomePage.png)
 
 ### Courses page
 
