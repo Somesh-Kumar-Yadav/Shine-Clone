@@ -28,7 +28,7 @@ First ypu have to clone down this repository . You would required to have node, 
 ## Authors
 
 - [@Somesh-Kumar-Yadav](https://github.com/Somesh-Kumar-Yadav)
-- [@Dhruvsurya](https://github.com/dhruva-surya)
+- [@Dhruvasurya](https://github.com/dhruva-surya)
 - [@Nitish-Kumar](https://github.com/nitishVrma)
 - [@Vishnu-Sankar](https://github.com/vishnusankarmasai)
 ## Contributing
