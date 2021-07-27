@@ -23,7 +23,7 @@ In this project, a few technologies and packages were used, listed below
 
 ## Prerequisites
 
-First ypu have to clone down this repository . You would required to have node, npm & react installed globally on your machine. After installing react , go to cloned directory and us : npm run start command.
+First you have to clone down this repository . You would required to have node, npm & react installed globally on your machine. After installing react , go to cloned directory and us : npm run start command.
 
 ## Authors
 
