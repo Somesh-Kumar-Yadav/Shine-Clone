@@ -256,8 +256,8 @@
 	clear: both;
 	color: #707070;
 	font-size: 12px;
+	position: absolute;
 	bottom: 0;
-	left: 0;
 	width: 100%;
 }
 .footer_cont_1 {
