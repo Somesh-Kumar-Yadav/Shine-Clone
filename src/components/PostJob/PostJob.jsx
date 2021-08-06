@@ -182,7 +182,7 @@ export function PostJob({ home, post }) {
 
           <div className={styles.footer}>
           <p>If you are looking for any information, please feel free to contact us. We will be glad to help.</p>
-          <img className={styles.imgf} src={process.env.PUBLIC_URL+`phone.png`} alt="phone"/> <a href="tel:080-47105555">080-47105555</a>
+          <img className={styles.imgf} src={process.env.PUBLIC_URL+`/phone.png`} alt="phone"/> <a href="tel:080-47105555">080-47105555</a>
 
           <a className={styles.a1} href="mailto:recruiterservices@shine.com">recruiterservices@shine.com</a>
           </div>
