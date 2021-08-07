@@ -3,6 +3,7 @@ import { NavBar } from "../HomePage/NavBar"
 import styles from "../../styles/PostJob.module.css"
 import { RegisterFooter } from "../Register/RegisterFooter"
 import axios from "axios"
+import {v4 as  uuid} from "uuid"
 
 export function PostJob({ home, post }) {
     const payload = {
@@ -56,6 +57,8 @@ export function PostJob({ home, post }) {
             axios.post("http://localhost:3004/jobs", job);
         } catch (e) {
             console.log(e);
+        } finally {
+            setJob({...payload})
         }
         
     }
@@ -102,12 +105,13 @@ export function PostJob({ home, post }) {
                             <h3 className={ styles.h41}>Total Posts</h3>
                          <h3 className={styles.h42}>Mobile</h3>
                     </div>
-                    <div className={styles.inp1}>
-                            <input type="Number" name="name" className={styles.text1}
+                        <div className={styles.inp1}>
+                            
+                            <input value={job.name} type="Number" name="name" className={styles.text1}
                            placeholder="" required="" onChange={HandleChange}  
                            aria-required="true" aria-invalid="true"/>
 
-                            <span  className={styles.c_code}><input id="mobile_placeholder" className={styles.text2}
+                            <span  className={styles.c_code}><input value={job.mobile} id="mobile_placeholder" className={styles.text2}
                                    type="Number" name="mobile" onChange={HandleChange}
                                    placeholder="+91" aria-label="mobile_placeholder"/ ></span>
                     </div>
@@ -117,13 +121,14 @@ export function PostJob({ home, post }) {
                          <h3 className={styles.h44}>Designation</h3>
                     </div>
                         <div className={styles.inp1}>
-                            <input onChange={HandleChange} type="text" name="company" className={styles.text1}
+                            <input value={job.company} onChange={HandleChange} type="text" name="company" className={styles.text1}
                            placeholder="" required="" id="id_email_id" 
                            aria-required="true" aria-invalid="true"
                            aria-describedby="id_email_id-error"/>
 
-                         <input onChange={HandleChange} type="text" name="designation" className={styles.text2} 
-                           placeholder="" required="" id="id_email_id" 
+                            <input
+                         value={job.designation}       onChange={HandleChange} type="text" name="designation" className={styles.text2}
+                           placeholder="" required="" id="id_email" 
                            aria-required="true" aria-invalid="true"
                            aria-describedby="id_email_id-error"/>
                     </div>
@@ -132,7 +137,7 @@ export function PostJob({ home, post }) {
                             <div className={styles.pol1}>
                             <li>
                                     <input name="check_box" type="checkbox" value="" className={styles.checkbox} id="id_check_box" aria-label="terms" placeholder=""/>
-                                    <span class="term">I agree to the
+                                    <span className="term">I agree to the
                                     <a href="/termsandconditions">Terms &amp; Conditions</a>
                                         <span className={styles.name_exit}></span>
                                     </span>
@@ -145,7 +150,7 @@ export function PostJob({ home, post }) {
                             </div>
 
                             <li className={styles.mtl}>
-                                <button onClick={HandleContinue} classname={styles.continue_button} >Continue</button>
+                                <button onClick={HandleContinue} className={styles.continue_button} >Continue</button>
                             </li>
                         </ul>
                    </div> 
@@ -158,7 +163,7 @@ export function PostJob({ home, post }) {
                     <div className={styles.jobLists_content}>
                         {
                             jobs.map(e => {
-                                return <div className={styles.jobLists_card}>
+                                return <div key={uuid()} className={styles.jobLists_card}>
                             <div className={styles.jobLists_card_top}>
                             <h3>{e.company}</h3>
                                         <h5>Post - {e.designation}</h5>

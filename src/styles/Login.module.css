@@ -232,7 +232,7 @@
 	justify-content: space-around;
 	align-items: center;
 	padding: 15px 0;
-	position: absolute;
+	/* position: absolute; */
 	bottom: 0;
 	left: 0;
 	background: #9fa1a1;
@@ -241,8 +241,8 @@
 	clear: both;
 	color: #707070;
 	font-size: 10px;
-	bottom: 0;
-	left: 0;
+	/* bottom: 0;
+	left: 0; */
 	width: 100%;
 }
 .footer_cont_1 {
