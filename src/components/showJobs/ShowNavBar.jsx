@@ -1,66 +1,8 @@
 import React from "react"
-import styled from "styled-components"
 import styles from "./ShowNavBar.module.css"
-import {useState} from "react"
-const SearchJobs=styled.div`
-width: 8%;
-background-color: #ffffff;
-color: #707070;
- position: absolute;
- top: 5.8%;
- left: 7%;
-padding: 1%;
-box-shadow:  5px 5px 3px #eeee,
-             -5px -5px 3px #ffff;
+import { useState } from "react"
+import { SearchJobs, Profile,Service,SignOut} from "../../styled-components/styled-components";
 
-`;
-
-const  Profile=styled.div`
-width: 8%;
-background-color: #ffffff;
-color: #707070;
- position: absolute;
- top: 5.8%;
- left: 26%;
-padding: 1%;
-box-shadow:  5px 5px 3px #eeee,
-             -5px -5px 3px #ffff;
-
-`;
-
-const  Service=styled.div`
-width: 18%;
-background-color: #ffffff;
-color: #707070;
- position: absolute;
- top: 5.8%;
- left: 32%;
-padding: 1%;
-box-shadow:  5px 5px 3px #eeee,
-             -5px -5px 3px #ffff;
-
- >div{
-     display: flex;
-     justify-content: space-between;
- } 
- >div div{
-   width: 48%;
- }             
-
-`;
-const SignOut=styled.div`
-width: 8%;
-background-color: #ffffff;
-color: #707070;
- position: absolute;
- top: 5.8%;
- left: 88%;
- cursor: pointer;
-padding: 0.5%;
-box-shadow:  5px 5px 3px #eeee,
-             -5px -5px 3px #ffff;
-
-`;
 
 
 export default function ShowNavBar({setIsAuth,home,user,jobList,profile,showJob}) {
