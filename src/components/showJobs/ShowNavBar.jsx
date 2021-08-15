@@ -36,10 +36,12 @@ const [singnOut,setSignout]=useState(false)
     setSearchJobContent(false)
     setProfileContent(false)
     setServiceContent(false)
-
-
- }
-
+  }
+  React.useEffect(() => { 
+    if (user.name.length === 0) {
+      user.name = "User";
+  }
+  },[user])
     return  <nav className={styles.nav}>
             <div className={styles.nav_left}>
             <img src={process.env.PUBLIC_URL + "/NavBar_Logo.png"} alt="Logo" className={styles.logo}/>
@@ -61,13 +63,13 @@ const [singnOut,setSignout]=useState(false)
           </SearchJobs> : ""}
 
           {(profileContent)?<Profile>
-        <p style={{ cursor:"pointer",marginTop:"5px"}} onClick={() => { profile() } }>Profile</p>
-                  <p style={{ cursor:"pointer",marginTop:"5px"}}>Recrutier Action</p>
+        <p className={styles.nav_para} onClick={() => { profile() } }>Profile</p>
+                  <p className={styles.nav_para}>Recrutier Action</p>
                   
           </Profile> : ""}
           {(serviceContent)?<Service>
                    <div>
-                       <div style={{borderRight:"1px solid grey"}}>
+                       <div className={styles.div_nav}>
                            <h4>E-Learning</h4>
                            <p>Digital Marketing</p>
                            <p>Data Science</p>
@@ -89,7 +91,7 @@ const [singnOut,setSignout]=useState(false)
           </Service> : ""}
 
           {(singnOut)?<SignOut>
-              <p style={{ cursor:"pointer",margin:"5px"}}>Account setting</p>
+              <p className={styles.nav_para}>Account setting</p>
         <p onClick={() => {
           alert("You Have Successfully logged out");
           localStorage.setItem("isAuth", false);
@@ -98,7 +100,7 @@ const [singnOut,setSignout]=useState(false)
           setTimeout(() => {
             home();
 }, 100);
-        }} style={{ cursor:"pointer",margin:"5px"}}>Sign Out</p>
+        }} className={styles.nav_para}>Sign Out</p>
 
 
           </SignOut>: ""
