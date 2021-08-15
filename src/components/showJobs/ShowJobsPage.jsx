@@ -1,4 +1,5 @@
-import {useState} from "react"
+import { useState } from "react"
+import styles from "../../styles/ShowJobs.module.css"
 import { Choice, City, Company, Deparment, Designation, Heading, IJ, Industry, InputBoxDiv, Inputdiv, InputInsidediv, Op, Skill, ViewMore } from "../../styled-components/styled-components"
 export default function ShowJobsPage(){
   const [showInputDiv,setShowInputDiv]=useState(false)
@@ -20,7 +21,7 @@ export default function ShowJobsPage(){
            
            <City>
            <Heading>Browse Jobs in Top Cities</Heading>
-           <div style={{marginTop:"10px"}}>
+           <div className={styles.showjobs_div}>
              <div>
                <img src={process.env.PUBLIC_URL + "/deli.png"} alt="Logo" />
                <p>Jobs in Delhi</p>
@@ -52,25 +53,25 @@ export default function ShowJobsPage(){
            </City>
        <Company>
           <Heading>Browse Jobs in Top Companies</Heading>
-           <div style={{marginTop:"10px"}}>
+           <div className={styles.showjobs_div}>
              <div>
-               <img style={{width:"95%"}} src={process.env.PUBLIC_URL + "/angle.png"} alt="Logo" />
+               <img className={styles.showjobs_div_img} src={process.env.PUBLIC_URL + "/angle.png"} alt="Logo" />
               
              </div>
              <div>
-               <img style={{width:"95%"}} src={process.env.PUBLIC_URL + "/hew.png"} alt="Logo" />
+               <img className={styles.showjobs_div_img} src={process.env.PUBLIC_URL + "/hew.png"} alt="Logo" />
                
              </div>
              <div>
-               <img style={{width:"95%"}} src={process.env.PUBLIC_URL + "/iifl.png"} alt="Logo" />
+               <img className={styles.showjobs_div_img} src={process.env.PUBLIC_URL + "/iifl.png"} alt="Logo" />
             
              </div>
              <div>
-               <img style={{width:"95%"}} src={process.env.PUBLIC_URL + "/reliance.png"} alt="Logo" />
+               <img className={styles.showjobs_div_img} src={process.env.PUBLIC_URL + "/reliance.png"} alt="Logo" />
            
              </div>
              <div>
-               <img style={{width:"95%"}} src={process.env.PUBLIC_URL + "/yes.png"} alt="Logo" />
+               <img className={styles.showjobs_div_img} src={process.env.PUBLIC_URL + "/yes.png"} alt="Logo" />
               
              </div>
             
@@ -82,7 +83,7 @@ export default function ShowJobsPage(){
              </Company>
             <Skill>
             <Heading>Browse Jobs by Skill</Heading>
-           <div style={{marginTop:"10px"}}>
+           <div className={styles.showjobs_div}>
              <div>
                <img src={process.env.PUBLIC_URL + "/java.png"} alt="Logo" />
                <p>JAVA jobs</p>
@@ -320,29 +321,18 @@ export default function ShowJobsPage(){
         </Choice>
         </Op>
         {(showInputDiv)?<InputBoxDiv s={showInputDiv}>
-             <div style={{width:"80%",marginLeft:"5%"}}>
+             <div className={styles.box_1}>
                  <input type="text"  placeholder="Job title" />
                  <input type="text"  placeholder="location"/>
                  <input type="number" placeholder="Experience in years "/>
              </div>
-             <div style={{marginLeft:"3%"}}>
-                 <div style={{padding:"5%" , backgroundColor:"#fbaf18" ,color:"#fff",textAlign:"center"}}>Search</div>
-                 <div style={{textAlign:"center",fontSize:"13px", color:"#5364c4"}}>Advance Search</div>
+             <div className={styles.box_2}>
+                 <div >Search</div>
+                 <div >Advance Search</div>
              </div>
-             <div style={{cursor:"pointer",marginLeft:"3%"}} onClick={()=>{setShowInputDiv(false)}}>x</div>
+             <div className={styles.showjobs_div_cross} onClick={()=>{setShowInputDiv(false)}}>x</div>
         
         </InputBoxDiv>: ""
 }
-        
- 
-   
- 
- 
  </>
-
-
-
-
-
-
 }

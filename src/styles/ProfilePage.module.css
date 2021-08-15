@@ -45,3 +45,8 @@
 	margin: 10px;
 	margin-left: 5px;
 }
+.profile {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}

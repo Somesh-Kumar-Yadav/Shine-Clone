@@ -138,8 +138,7 @@ margin-left: 2.5%;
     cursor: pointer;
     outline: medium none!important;
     text-decoration: none;
-    font-size: 12px;
-    
+    font-size: 12px;   
 }
 
 `
@@ -149,12 +148,9 @@ export  const ViewMore=styled.div`
   color: #5364c4;
   font-size: 12px;
   width: 100%;
-
   >div{
-   
-    
+    cursor: pointer;
     margin-right: -4%;
-    
   }
 `
 
