@@ -5,7 +5,7 @@ export function ProfileContainer({ user }) {
         <div className={styles.profile_page_container}>
             
             <div className={styles.profile_page_container_top}>
-                <div>
+               
                     <div className={styles.profile_page_title}>
                     <h1>Personal</h1>
                     </div>
@@ -37,7 +37,7 @@ export function ProfileContainer({ user }) {
                     <strong>Device you own</strong>
                         <p></p>
                     </div>
-                </div>
+                <div className={styles.profile_page_img}><img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt=""/> </div>
                 
             </div>
             
