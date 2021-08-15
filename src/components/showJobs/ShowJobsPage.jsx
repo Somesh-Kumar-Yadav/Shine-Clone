@@ -1,4 +1,3 @@
-
 import {useState} from "react"
 import { Choice, City, Company, Deparment, Designation, Heading, IJ, Industry, InputBoxDiv, Inputdiv, InputInsidediv, Op, Skill, ViewMore } from "../../styled-components/styled-components"
 export default function ShowJobsPage(){

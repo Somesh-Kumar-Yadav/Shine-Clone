@@ -327,11 +327,7 @@ border-bottom: 3px solid #eee;
    width: 30%;
    height: 50%;
    margin-left:2%;
-
  }
-
-
-
  `
 export  const Op=styled.div`
      opacity: ${({showInputDiv})=>{return (showInputDiv)? 0.3: ""}};

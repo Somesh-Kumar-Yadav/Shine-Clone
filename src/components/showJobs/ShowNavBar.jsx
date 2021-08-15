@@ -1,9 +1,7 @@
 import React from "react"
-import styles from "./ShowNavBar.module.css"
+import styles from "../../styles/ShowNavBar.module.css"
 import { useState } from "react"
 import { SearchJobs, Profile,Service,SignOut} from "../../styled-components/styled-components";
-
-
 
 export default function ShowNavBar({setIsAuth,home,user,jobList,profile,showJob}) {
 const [searchJobContent,setSearchJobContent]=useState(false);
