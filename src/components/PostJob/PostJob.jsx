@@ -143,7 +143,7 @@ export function PostJob({ home, post }) {
                                     </span>
                             </li>
                             
-                            <li style={{marginTop:"5px"}}>
+                            <li className={styles.pol2}>
                                     <input name="check_box_kyc" type="checkbox" value="" className={styles.checkbox} id="id_check_box_kyc" aria-label="kyc" placeholder=""/>
                                     <span className={styles.term}>I agree to share my KYC documents with Shine</span>
                             </li>

@@ -30,15 +30,13 @@ export function LoginContainer({ showJob,home, login, register,setUser,user,setI
         }
         else {
             setUser({ ...data[data.length - 1] });
-            // console.log(data[data.length - 1]);
             setIsAuth(true);
             localStorage.setItem("isAuth", true);
             localStorage.setItem("user", JSON.stringify([data[data.length-1]]));
-            // localStorage.setItem("user", JSON.stringify([user]));
             alert("You have Successfully logged in !!!");
             setTimeout(() => {
                 showJob();
-            }, 1500);
+            }, 500);
 
         }
     }
