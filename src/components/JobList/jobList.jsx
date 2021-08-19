@@ -7,30 +7,37 @@ import { data } from '../../data.js'
 import { v4 as uuid } from "uuid";
 
 
-export default function Lists({setIsAuth,home, jobList,user,profile,showJob}) {
+export default function Lists({isAuth,setIsAuth,home, jobList,user,profile,showJob,login}) {
 
 
-    
+    const title = localStorage.getItem("title");
     const[data1,setdata] =useState(data)
     const[selected,setSelected] = useState(data1)
     const[status,setStatus] = useState(["Apply Here","white"])
-    const[input,setInput] = useState("")
+    const[input,setInput] = useState(title)
 
     const handleChange = function(e){
         setInput(e.target.value)
-        console.log(input)
+        //console.log(input)
     }
 
     const handleSearch = function(){
         let searched = data.filter((e) => {
             return e.searchKey === input;
         })
-        console.log(searched)
+        //console.log(searched)
         if(searched.length !== 0){
             setdata(searched)
         }
     }
-
+    useEffect(() => {
+    let searched = data.filter((e) => {
+            return e.searchKey === title;
+    })
+        if(searched.length !== 0){
+            setdata(searched)
+        }
+},[title])
     useEffect(() => {
         setSelected(data1);
         setStatus(["Apply Here","white","gold"])
@@ -47,11 +54,11 @@ export default function Lists({setIsAuth,home, jobList,user,profile,showJob}) {
         }))
     }
     return (<>
-            <ShowNavBar setIsAuth={setIsAuth} home={home} jobList={jobList} user={user} profile={profile} showJob={ showJob}/>
+            <ShowNavBar isAuth={isAuth} login={login} setIsAuth={setIsAuth} home={home} jobList={jobList} user={user} profile={profile} showJob={ showJob}/>
         <div className={styles.main}>
             <div  className={styles.filter}>
                 <div className={styles.input}>
-                   <input type={styles.text} onChange={handleChange} placeholder="Job skills" />
+                   <input value={input} type={styles.text} onChange={handleChange} placeholder="Job skills" />
                    <i className="fas fa-search fa-lg" onClick={handleSearch}></i>
                 </div>
                 <p>Filter by</p>

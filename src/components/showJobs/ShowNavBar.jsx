@@ -3,11 +3,11 @@ import styles from "../../styles/ShowNavBar.module.css"
 import { useState } from "react"
 import { SearchJobs, Profile,Service,SignOut} from "../../styled-components/styled-components";
 
-export default function ShowNavBar({setIsAuth,home,user,jobList,profile,showJob}) {
+export default function ShowNavBar({isAuth,setIsAuth,login,home,user,jobList,profile,showJob}) {
 const [searchJobContent,setSearchJobContent]=useState(false);
 const [profileContent,setProfileContent]=useState(false);
 const [serviceContent,setServiceContent]=useState(false);
-const [singnOut,setSignout]=useState(false)
+  const [singnOut, setSignout] = useState(false);
     const handleSearchJob=()=>{
         setSearchJobContent(!searchJobContent)
         setProfileContent(false)
@@ -35,22 +35,24 @@ const [singnOut,setSignout]=useState(false)
     setProfileContent(false)
     setServiceContent(false)
   }
-  React.useEffect(() => { 
-    if (user.name.length === 0) {
+  React.useEffect(() => {
+    if (user.name === undefined) {
       user.name = "User";
-  }
-  },[user])
+    }
+  }, [user]);
     return  <nav className={styles.nav}>
             <div className={styles.nav_left}>
             <img src={process.env.PUBLIC_URL + "/NavBar_Logo.png"} alt="Logo" className={styles.logo}/>
                 <li className={styles.nav_tab} onClick={handleSearchJob}>Search Jobs</li>
                 <li className={styles.nav_tab} onClick={()=>{jobList()}} >Jobs For You</li>
                 <li className={styles.nav_tab}>Mailbox</li>
-                <li className={styles.nav_tab} onClick={handleProfile}>My Profile</li>
+        <li className={styles.nav_tab} onClick={() => {
+          handleProfile()
+        }}>My Profile</li>
                 <li className={styles.nav_tab} onClick={handleServices}>Services</li>
             <li className={styles.career_guidance}><img src={process.env.PUBLIC_URL + "/Career_bulb.png"  } alt="career"/>Career Guidance</li>
             </div>
-            <div className={styles.nav_profile} onClick={handleSignprofile}>{"hi, "+user.name}</div>
+            <div className={styles.nav_profile} onClick={handleSignprofile}>{isAuth===true?"hi, "+user.name:"hi, User"}</div>
           {(searchJobContent)?<SearchJobs>
                   <p>Jobs by City</p>
                   <p>Jobs by Skills</p>
@@ -89,7 +91,7 @@ const [singnOut,setSignout]=useState(false)
           </Service> : ""}
 
           {(singnOut)?<SignOut>
-              <p className={styles.nav_para}>Account setting</p>
+        {isAuth===true?<> <p className={styles.nav_para}>Account setting</p>
         <p onClick={() => {
           alert("You Have Successfully logged out");
           localStorage.setItem("isAuth", false);
@@ -99,8 +101,8 @@ const [singnOut,setSignout]=useState(false)
             home();
 }, 100);
         }} className={styles.nav_para}>Sign Out</p>
-
-
+</>:<></>
+        }
           </SignOut>: ""
 
           }

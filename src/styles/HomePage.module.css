@@ -722,7 +722,7 @@
 .register_title > img {
 	width: 46px;
 	position: relative;
-	left: 850px;
+	left: 750px;
 	height: 46px;
 }
 .register_inputs {
@@ -749,10 +749,10 @@
 }
 .register_inputs > input {
 	padding: 20px;
-	width: 25rem;
+	width: 23rem;
 }
 .register_inputs > select {
-	width: 25rem;
+	width: 23rem;
 }
 .register_inputs > button {
 	background: #f7a400;
