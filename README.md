@@ -30,6 +30,8 @@ git clone <url>
 
 npm install
 
+cd Shine-Clone
+
 json-server db.json --port 3004
 ```
 
