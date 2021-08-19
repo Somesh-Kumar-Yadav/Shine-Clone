@@ -11,6 +11,7 @@ export default function Lists({isAuth,setIsAuth,home, jobList,user,profile,showJ
 
 
     const title = localStorage.getItem("title");
+    const location = localStorage.getItem("location");
     const[data1,setdata] =useState(data)
     const[selected,setSelected] = useState(data1)
     const[status,setStatus] = useState(["Apply Here","white"])
@@ -29,13 +30,21 @@ export default function Lists({isAuth,setIsAuth,home, jobList,user,profile,showJ
         if(searched.length !== 0){
             setdata(searched)
         }
+        else {
+            alert(`Sorry we deeply regret that no jobs is available for ${input} , Search other title i.e. java , php `)
+        }
     }
     useEffect(() => {
-    let searched = data.filter((e) => {
-            return e.searchKey === title.toLowerCase();
+        let searched = data.filter((e) => {
+            if (location.length === 0) {
+          return e.searchKey === title.toLowerCase();  
+        }
+            return e.searchKey === title.toLowerCase()&&e.location.toLowerCase()===location.toLowerCase();
     })
         if(searched.length !== 0){
             setdata(searched)
+        } else {
+            alert(`Sorry we deeply regret that no jobs is available for ${title} and for location ${location} , Search other title i.e. java , php `)
         }
 },[title])
     useEffect(() => {

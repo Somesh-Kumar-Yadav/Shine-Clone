@@ -42,7 +42,7 @@ const [serviceContent,setServiceContent]=useState(false);
   }, [user]);
     return  <nav className={styles.nav}>
             <div className={styles.nav_left}>
-            <img src={process.env.PUBLIC_URL + "/NavBar_Logo.png"} alt="Logo" className={styles.logo}/>
+            <img onClick={home} src={process.env.PUBLIC_URL + "/NavBar_Logo.png"} alt="Logo" className={styles.logo}/>
                 <li className={styles.nav_tab} onClick={handleSearchJob}>Search Jobs</li>
                 <li className={styles.nav_tab} onClick={()=>{jobList()}} >Jobs For You</li>
                 <li className={styles.nav_tab}>Mailbox</li>
