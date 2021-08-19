@@ -21,9 +21,20 @@ In this project, a few technologies and packages were used, listed below
 5. User can apply for the job based on his choice.
 6. Recruiter can also post a job based on his requirement .
 
-## Prerequisites
+## Prerequisites-
 
-First you have to clone down this repository . You would required to have node, npm & react installed globally on your machine. After installing react , go to cloned directory and us : npm run start command.
+### Clone the App
+
+```
+git clone <url>
+
+npm install
+
+cd Shine-Clone
+
+json-server db.json --port 3004
+```
+
 
 ## Authors
 
