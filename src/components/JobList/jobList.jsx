@@ -36,17 +36,20 @@ export default function Lists({isAuth,setIsAuth,home, jobList,user,profile,showJ
     }
     useEffect(() => {
         let searched = data.filter((e) => {
-            if (location.length === 0) {
-          return e.searchKey === title.toLowerCase();  
-        }
+            if (location.length !== 0&&title.length === 0) {
+          return e.location.toLowerCase() === location.toLowerCase();  
+            }
+            if (title.length !== 0&&location.length === 0) {
+              return e.searchKey === title.toLowerCase();   
+            }
             return e.searchKey === title.toLowerCase()&&e.location.toLowerCase()===location.toLowerCase();
     })
         if(searched.length !== 0){
             setdata(searched)
         } else {
-            alert(`Sorry we deeply regret that no jobs is available for ${title} and for location ${location} , Search other title i.e. java , php `)
+            alert(`Sorry we deeply regret that no jobs is available for this credentials , Search other title i.e. java , php `)
         }
-},[title])
+},[title,location])
     useEffect(() => {
         setSelected(data1);
         setStatus(["Apply Here","white","gold"])
