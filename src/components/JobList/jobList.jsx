@@ -23,16 +23,16 @@ export default function Lists({isAuth,setIsAuth,home, jobList,user,profile,showJ
 
     const handleSearch = function(){
         let searched = data.filter((e) => {
-            return e.searchKey === input;
+            return e.searchKey === input.toLowerCase();
         })
-        //console.log(searched)
+        setInput("")
         if(searched.length !== 0){
             setdata(searched)
         }
     }
     useEffect(() => {
     let searched = data.filter((e) => {
-            return e.searchKey === title;
+            return e.searchKey === title.toLowerCase();
     })
         if(searched.length !== 0){
             setdata(searched)
