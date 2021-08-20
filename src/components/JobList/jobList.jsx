@@ -214,7 +214,11 @@ export default function Lists({isAuth,setIsAuth,home, jobList,user,profile,showJ
                     <i className="fas fa-money-bill-wave"></i><span>-{selected[0].salary} Lakhs</span>
                     <strong>Posted on: {selected[0].date}</strong>
                     <br />
-                        <button id={styles.apply} style={{color:status[1], background:status[2]}} onClick={()=>{
+                        <button id={styles.apply} style={{ color: status[1], background: status[2] }} onClick={() => {
+                            if (isAuth) {
+                                alert("Login first before applying");
+                                login();
+                            }
                         setStatus(["Applied","rgb(72, 214, 29)","white"])
                     }}><h3>{status[0]}</h3></button>
                 </div>
