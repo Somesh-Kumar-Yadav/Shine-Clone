@@ -1,9 +1,23 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import styles from "../../styles/ShowJobs.module.css"
 import { Choice, City, Company, Deparment, Designation, Heading, IJ, Industry, InputBoxDiv, Inputdiv, InputInsidediv, Op, Skill, ViewMore } from "../../styled-components/styled-components"
-export default function ShowJobsPage(){
+export default function ShowJobsPage({ jobList}){
   const [showInputDiv,setShowInputDiv]=useState(false)
+  const [title, setTitle] = useState("");
+    const [location, setLocation] = useState("");
 
+    const handleSearch = () => {
+        
+        
+		    localStorage.setItem("title", title);
+		    localStorage.setItem("location", location);
+	    
+        jobList();
+    }
+    useEffect(() => {
+            localStorage.setItem("location","");
+            localStorage.setItem("title", "");
+    },[])
   const handleInput=()=>{
     setShowInputDiv(true) 
   }
@@ -322,13 +336,17 @@ export default function ShowJobsPage(){
         </Op>
         {(showInputDiv)?<InputBoxDiv s={showInputDiv}>
              <div className={styles.box_1}>
-                 <input type="text"  placeholder="Job title" />
-                 <input type="text"  placeholder="location"/>
+                 <input onChange={(e) => {
+                    setTitle(e.target.value);
+                }} type="text"  placeholder="Job title" />
+                 <input onChange={(e) => {
+                    setLocation(e.target.value)
+                }} type="text"  placeholder="location"/>
                  <input type="number" placeholder="Experience in years "/>
              </div>
              <div className={styles.box_2}>
-                 <div >Search</div>
-                 <div >Advance Search</div>
+                 <div className={styles.box_7} onClick={handleSearch} >Search</div>
+                 <div className={styles.box_7} >Advance Search</div>
              </div>
              <div className={styles.showjobs_div_cross} onClick={()=>{setShowInputDiv(false)}}>x</div>
         

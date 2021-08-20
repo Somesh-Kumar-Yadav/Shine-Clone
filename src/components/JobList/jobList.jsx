@@ -35,6 +35,9 @@ export default function Lists({isAuth,setIsAuth,home, jobList,user,profile,showJ
         }
     }
     useEffect(() => {
+        if (title.length === 0 && location.length === 0) {
+            return;
+        }
         let searched = data.filter((e) => {
             if (location.length !== 0&&title.length === 0) {
           return e.location.toLowerCase() === location.toLowerCase();  

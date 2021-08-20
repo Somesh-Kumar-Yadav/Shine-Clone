@@ -6,7 +6,7 @@ export default function ShowJob({setIsAuth,home, jobList,user,profile,showJob,lo
 
  return <>
        <ShowNavBar isAuth={isAuth} login={login} setIsAuth={setIsAuth} home={home} jobList={jobList} user={user} showJob={showJob} profile={ profile}/>
-       <ShowJobsPage />
+       <ShowJobsPage jobList={ jobList} />
  </>
 
 
