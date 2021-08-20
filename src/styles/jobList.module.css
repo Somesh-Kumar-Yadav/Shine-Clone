@@ -47,6 +47,7 @@
 }
 .filter ul li {
   padding-left: 20px;
+  z-index: 1;
   /* background: #e1e6ec; */
   /* border: 1px solid #d2d6db; */
   /* border: 1px solid red; */
