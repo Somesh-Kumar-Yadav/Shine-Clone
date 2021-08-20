@@ -22,6 +22,7 @@ In this project, a few technologies and packages were used, listed below
 6. Recruiter can also post a job based on his requirement .
 
 ## Prerequisites-
+Make sure you have node & npm install in your system. 
 
 ### Clone the App
 
@@ -33,6 +34,8 @@ npm install
 cd Shine-Clone
 
 json-server db.json --port 3004
+
+npm run start
 ```
 
 
