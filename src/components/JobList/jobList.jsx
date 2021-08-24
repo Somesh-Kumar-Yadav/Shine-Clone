@@ -215,7 +215,7 @@ export default function Lists({isAuth,setIsAuth,home, jobList,user,profile,showJ
                     <strong>Posted on: {selected[0].date}</strong>
                     <br />
                         <button id={styles.apply} style={{ color: status[1], background: status[2] }} onClick={() => {
-                            if (isAuth) {
+                            if (!isAuth) {
                                 alert("Login first before applying");
                                 login();
                             }
