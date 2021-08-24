@@ -29,6 +29,8 @@ Make sure you have node & npm install in your system.
 ```
 git clone <url>
 
+npm install
+
 cd Shine-Clone
 
 npm install
