@@ -58,13 +58,14 @@ export function PostJob({ home, post }) {
         } catch (e) {
             console.log(e);
         } finally {
-            setJob({...payload})
+            setJobs([...jobs, job]);
+            setJob({ ...payload });
         }
         
     }
     const HandleDelete = (id) => {
         try {
-            axios.delete("https://create-him-app.herokuapp.com/posts"+id);
+            axios.delete("https://create-him-app.herokuapp.com/posts/"+id);
         } catch (e) {
             console.log(e);
         } finally {
