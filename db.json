@@ -108,16 +108,9 @@
   ],
   "jobs": [
     {
-      "name": "5",
-      "mobile": "9876543210",
-      "company": "ONGC",
-      "designation": "SDE",
-      "id": 4
-    },
-    {
-      "name": "3",
-      "mobile": "6354136407",
-      "company": "HYC",
+      "name": "2",
+      "mobile": "1234567890",
+      "company": "HYc",
       "designation": "SDE_II",
       "id": 5
     }

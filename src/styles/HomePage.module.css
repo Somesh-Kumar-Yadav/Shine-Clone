@@ -1017,3 +1017,6 @@
 .job_search_body {
 	height: 335px;
 }
+.register_title > img {
+	cursor: pointer;
+}

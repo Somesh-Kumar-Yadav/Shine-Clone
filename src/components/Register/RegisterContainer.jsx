@@ -14,7 +14,7 @@ export function RegisterContainer({login}) {
     }
     const HandlePost = () => {
         try {
-            axios.post("http://localhost:3004/users", userData);
+            axios.post("https://create-him-app.herokuapp.com/user", userData);
         } catch (e) {
             console.log(e);
         }

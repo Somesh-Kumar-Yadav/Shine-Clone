@@ -19,7 +19,7 @@ export function PostJob({ home, post }) {
     }
     const HandleJobs = () => {
     try {
-            axios.get("http://localhost:3004/jobs").then(res => {
+            axios.get("https://create-him-app.herokuapp.com/posts").then(res => {
                 setJobs(res.data);
        })
         } catch (e) {
@@ -54,7 +54,7 @@ export function PostJob({ home, post }) {
     }
     const HandlePost = () => {
         try {
-            axios.post("http://localhost:3004/jobs", job);
+            axios.post("https://create-him-app.herokuapp.com/posts", job);
         } catch (e) {
             console.log(e);
         } finally {
@@ -64,7 +64,7 @@ export function PostJob({ home, post }) {
     }
     const HandleDelete = (id) => {
         try {
-            axios.delete("http://localhost:3004/jobs/"+id);
+            axios.delete("https://create-him-app.herokuapp.com/posts"+id);
         } catch (e) {
             console.log(e);
         } finally {

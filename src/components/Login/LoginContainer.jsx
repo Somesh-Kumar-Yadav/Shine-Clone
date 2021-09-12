@@ -13,7 +13,7 @@ export function LoginContainer({ showJob,home, login, register,setUser,user,setI
     }
     React.useEffect(() => {
         try {
-            axios.get("http://localhost:3004/users").then(res => {
+            axios.get("https://create-him-app.herokuapp.com/user").then(res => {
                 setUsers(res.data);
        })
         } catch (e) {
