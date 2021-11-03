@@ -33,8 +33,6 @@ cd Shine-Clone
 
 npm install
 
-json-server db.json --port 3004
-
 npm run start
 ```
 
