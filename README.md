@@ -35,7 +35,14 @@ npm install
 
 npm run start
 ```
-
+## Snippets
+ <img src="./screenshots/HomePage.png" width="780" height="450">
+ <img src="./screenshots/LoginPage.png" width="780" height="450">
+  <img src="./screenshots/RegisterPage.png" width="780" height="450">
+   <img src="./screenshots/PostJobPage.png" width="780" height="450">
+    <img src="./screenshots/JobListPage.png" width="780" height="450">
+     <img src="./screenshots/JobSearchPage.png" width="780" height="450">
+      <img src="./screenshots/ProfilePage.png" width="780" height="450">
 
 ## Authors
 
